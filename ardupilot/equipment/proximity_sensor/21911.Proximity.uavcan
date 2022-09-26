@@ -1,0 +1,18 @@
+#
+# Proximity data
+#
+
+uavcan.Timestamp timestamp
+
+uint8 sensor_id
+
+uint3 READING_TYPE_NO_DATA   = 0   # Range is unknown
+uint3 READING_TYPE_NOT_CONNECTED = 1   # Range field contains valid distance
+uint3 READING_TYPE_GOOD   = 2   # Range field contains min range for the sensor
+
+uint3 reading_type
+
+float16 yaw                          # Degrees
+float16 pitch                        # Degrees
+float16 distance                     # Meters
+
